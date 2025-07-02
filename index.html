@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maedi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');</style>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Maedi</a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Normal Navbar (untuk desktop) -->
+    <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Tentang saya</a></li>
+        <li class="nav-item"><a class="nav-link" href="#service">Keahlian</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
+        <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Pendidikan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="#" class="btn btn-warning">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Offcanvas Menu (for mobile) -->
+<div class="offcanvas offcanvas-start bg-primary text-white" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title fw-bold">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link text-dark" href="#home">Beranda</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#about">Tentang Saya</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#service">Keahlian</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#experience">Pengalaman</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#project">Project</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#education">Pendidikan</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#kontak">Kontak</a></li>
+      <li class="nav-item mt-3">
+        <a href="#" class="btn btn-warning w-100">Resume</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section text-white d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <p class="small fw-semibold mb-1">👨‍💻 Portofolio Pribadi</p>
+          <h1 class="display-5 fw-bold mb-3">Mendukung Operasional Digital dengan Sentuhan Kreatif</h1>
+          <p class="mb-3">Menggabungkan keahlian administratif, teknis, dan kreatif untuk mendukung operasional digital secara efisien dan profesional.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <span class="badge bg-light text-primary">Frontend Developer</span>
+            <span class="badge bg-light text-primary">Data Visualization</span>
+            <span class="badge bg-light text-primary">Administrative Skills</span>
+            <span class="badge bg-light text-primary">Content Design</span>
+          </div>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-left">
+          <img src="asset/DEV2-removebg-preview.png" alt="Hero" class="img-fluid hero-img mt-4 mt-md-0" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Section Keunggulan -->
+ 
+<section class="py-5 bg-with section-keunggulan">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="bg-white shadow rounded-4 p-4 text-center">
+          <div class="bg-primary rounded-circle p-3 mb-3 d-inline-block text-white">
+            <!-- Globe Icon -->
+            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.057v-3.057h2.994c-.059 1.143-.212 2.24-.456 3.279-.823-.12-1.674-.188-2.538-.222zm1.957 2.162c-.499 1.33-1.159 2.497-1.957 3.456v-3.62c.666.028 1.319.081 1.957.164zm-1.957-7.219v-3.015c.868-.034 1.721-.103 2.548-.224.238 1.027.389 2.111.446 3.239h-2.994zm0-5.014v-3.661c.806.969 1.471 2.15 1.971 3.496-.642.084-1.3.137-1.971.165zm2.703-3.267c1.237.496 2.354 1.228 3.29 2.146-.642.234-1.311.442-2.019.607-.344-.992-.775-1.91-1.271-2.753zm-7.241 13.56c-.244-1.039-.398-2.136-.456-3.279h2.994v3.057c-.865.034-1.714.102-2.538.222zm2.538 1.776v3.62c-.798-.959-1.458-2.126-1.957-3.456.638-.083 1.291-.136 1.957-.164zm-2.994-7.055c.057-1.128.207-2.212.446-3.239.827.121 1.68.19 2.548.224v3.015h-2.994zm1.024-5.179c.5-1.346 1.165-2.527 1.97-3.496v3.661c-.671-.028-1.329-.081-1.97-.165zm-2.005-.35c-.708-.165-1.377-.373-2.018-.607.937-.918 2.053-1.65 3.29-2.146-.496.844-.927 1.762-1.272 2.753zm-.549 1.918c-.264 1.151-.434 2.36-.492 3.611h-3.933c.165-1.658.739-3.197 1.617-4.518.88.361 1.816.67 2.808.907zm.009 9.262c-.988.236-1.92.542-2.797.9-.89-1.328-1.471-2.879-1.637-4.551h3.934c.058 1.265.231 2.488.5 3.651zm.553 1.917c.342.976.768 1.881 1.257 2.712-1.223-.49-2.326-1.211-3.256-2.115.636-.229 1.299-.435 1.999-.597zm9.924 0c.7.163 1.362.367 1.999.597-.931.903-2.034 1.625-3.257 2.116.489-.832.915-1.737 1.258-2.713zm.553-1.917c.27-1.163.442-2.386.501-3.651h3.934c-.167 1.672-.748 3.223-1.638 4.551-.877-.358-1.81-.664-2.797-.9zm.501-5.651c-.058-1.251-.229-2.46-.492-3.611.992-.237 1.929-.546 2.809-.907.877 1.321 1.451 2.86 1.616 4.518h-3.933z"/>
+            </svg>
+          </div>
+          <h5 class="fw-bold">Manajemen Administrasi Efisien</h5>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-white shadow rounded-4 p-4 text-center">
+          <div class="bg-primary rounded-circle p-3 mb-3 d-inline-block text-white">
+            <!-- Gear Icon -->
+            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M24 13.616v-3.232c-1.651-.587-2.694-.752-3.219-2.019v-.001c-.527-1.271.1-2.134.847-3.707l-2.285-2.285c-1.561.742-2.433 1.375-3.707.847h-.001c-1.269-.526-1.435-1.576-2.019-3.219h-3.232c-.582 1.635-.749 2.692-2.019 3.219h-.001c-1.271.528-2.132-.098-3.707-.847l-2.285 2.285c.745 1.568 1.375 2.434.847 3.707-.527 1.271-1.584 1.438-3.219 2.02v3.232c1.632.58 2.692.749 3.219 2.019.53 1.282-.114 2.166-.847 3.707l2.285 2.286c1.562-.743 2.434-1.375 3.707-.847h.001c1.27.526 1.436 1.579 2.019 3.219h3.232c.582-1.636.75-2.69 2.027-3.222h.001c1.262-.524 2.12.101 3.698.851l2.285-2.286c-.744-1.563-1.375-2.433-.848-3.706.527-1.271 1.588-1.44 3.221-2.021zm-12 2.384c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"/>
+            </svg>
+          </div>
+          <h5 class="fw-bold">Solusi Teknologi Tepat Guna</h5>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-white shadow rounded-4 p-4 text-center">
+          <div class="bg-primary rounded-circle p-3 mb-3 d-inline-block text-white">
+            <!-- Shield Check Icon -->
+            <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 0c-2.995 2.995-7.486 4-11 4 0 8.582 5.068 16.097 11 20 5.932-3.903 11-11.418 11-20-3.514 0-8.005-1.005-11-4zm-8.912 5.894c2.455-.246 5.912-1.012 8.912-3.25v18.906c-4-3.063-8.254-8.604-8.912-15.656z"/>
+            </svg>
+          </div>
+          <h5 class="fw-bold">Komunikasi Visual Profesional</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section Indexing Partners -->
+<section class="py-5 bg-with">
+  <div class="container-fluid px-0 overflow-hidden">
+    <div class="slider">
+  <div class="slide-track">
+    <!-- Logo teknis -->
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50"></div>
+    <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50"></div>
+    <div class="slide"><img src="asset/canva.jpeg" alt="Canva" width="50"></div>
+    <div class="slide"><img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel" width="50"></div>
+    <div class="slide"><img src="asset/set.png" alt="Google Sheets" width="50"></div>
+
+    <!-- Duplikat untuk looping -->
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50"></div>
+    <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" width="50"></div>
+    <div class="slide"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="50"></div>
+    <div class="slide"><img src="https://cdn-icons-png.flaticon.com/512/888/888853.png" alt="Canva" width="50"></div>
+    <div class="slide"><img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel" width="50"></div>
+    <div class="slide"><img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google Sheets" width="50"></div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- Tentang Saya -->
+<section id="about" class="py-5 bg-with">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <h2 class="fw-bold mb-3">Tentang Saya</h2>
+        <p>Saya adalah seorang profesional serbaguna yang memiliki minat dan keahlian di bidang <strong>Frontend Development</strong>, <strong>Administrasi</strong>, dan <strong>Desain Visual</strong>. Dengan pendekatan yang terorganisir dan berorientasi pada detail, saya terbiasa menangani proyek digital dan dokumen administratif secara efisien, sekaligus menggabungkannya dengan sentuhan estetika dalam desain.</p>
+        <ul>
+          <li>Mengembangkan antarmuka web yang responsif dan interaktif menggunakan HTML, CSS, dan JavaScript</li>
+          <li>Mengelola data dan dokumen administratif dengan rapi dan sistematis</li>
+          <li>Mendesain materi visual seperti presentasi, media promosi dengan prinsip desain modern</li>
+        </ul>
+        <p>Dengan semangat belajar dan teknologi tepat guna sebagai prinsip kerja, saya siap memberikan kontribusi yang maksimal dalam setiap proyek.</p>
+        <a href="https://wa.me/6282119883246" class="btn btn-warning mt-3">Hubungi Saya</a>
+      </div>
+      <div class="col-lg-6 text-center" data-aos="fade-left">
+        <img src="asset/pexels-veeterzy-303383.jpg" alt="Tentang Saya" class="img-fluid rounded shadow" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Section: Pengalaman Kerja -->
+<section id="experience" class="py-5 bg-with text-center">
+  <div class="container">
+    <h2 class="section-title mb-3">Pengalaman Kerja</h2>
+    <p class="mb-4">Berikut adalah pengalaman saya bekerja selama satu tahun penuh di CV Kahe Group, mulai Juli 2024 hingga Juli 2025, dengan berbagai peran yang berkontribusi langsung pada efisiensi operasional dan pengelolaan data perusahaan.</p>
+
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4"  data-aos="fade-right" data-aos-delay="100">
+        <div class="footer-section text-white rounded-4 p-4">
+          <h5 class="fw-bold">CV Kahe Group</h5>
+          <p class="mt-2 mb-0">Periode: Juli 2024 – Juli 2025<br>Posisi: Staff Administrasi & Data</p>
+        </div>
+      </div>
+      <div class="col-md-6"data-aos="fade-left" data-aos-delay="100">
+        <div class="footer-section text-white rounded-4 p-4 text-start" >
+          <h5 class="fw-bold">Ruang Lingkup Pekerjaan</h5>
+          <ul class="mt-2 mb-0 ps-3">
+            <li><strong>Input Data:</strong> Menginput data dari berbagai sumber internal dan eksternal.</li>
+            <li><strong>Manajemen Data Karyawan:</strong> Memperbarui data NIK, status kepegawaian, dan data magang secara berkala.</li>
+            <li><strong>Pembuatan Dokumen Karyawan:</strong> Mendesain ID Card dan menyusun sertifikat pelatihan/magang.</li>
+            <li><strong>Pengolahan & Visualisasi Data:</strong> Mengolah serta menyajikan data dalam bentuk laporan dan grafik untuk evaluasi internal.</li>
+            <li><strong>Desain Konten Internal:</strong> Membuat konten visual untuk memperingati Hari Besar Nasional dan kebutuhan internal lainnya.</li>
+            <li><strong>Scraping Data:</strong> Mengumpulkan dan menginput data massal untuk keperluan operasional dan analisis perusahaan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section: Project dengan Link -->
+<section id="project" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Project Personal</h2>
+    <p class="mb-5 text-muted">Beberapa project yang telah saya kerjakan secara mandiri maupun dalam konteks kerja profesional.</p>
+
+    <div class="row g-4">
+
+      <!-- Project 1: Website Personal -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-right"data-aos-delay="100" >
+        <div class="card h-100 shadow-sm ">
+          <div class="card-body text-start">
+            <h5 class="fw-bold text-primary">Website Personal / Bisnis</h5>
+            <p class="small mb-3">Website statis yang dibangun menggunakan HTML, CSS, dan Bootstrap untuk profil dan layanan pribadi/bisnis.</p>
+            <span class="badge bg-warning text-dark mb-2">Selesai</span><br>
+            <a href="https://maediefendi.github.io/maediefendi/" target="_blank" class="btn btn-outline-primary btn-sm">Lihat Website</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Sistem Absensi -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-primary text-white">
+          <div class="card-body text-start">
+            <h5 class="fw-bold">Sistem Absensi Karyawan</h5>
+            <p class="small mb-3">
+              Aplikasi berbasis Laravel yang sedang dikembangkan dengan fitur login, absensi otomatis, selfie, dan radius lokasi kantor (GPS).
+            </p>
+            <span class="badge bg-warning text-dark mb-2">Dalam Proses Pengembangan</span><br>
+            <a href="https://maediefendi.github.io/Absensi-Karayawan/" target="_blank" class="btn btn-outline-light btn-sm">Lihat di GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Dashboard Visualisasi -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-right"data-aos-delay="100" >
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-start">
+            <h5 class="fw-bold text-primary">Dashboard Visualisasi Data</h5>
+            <p class="small mb-3">Dashboard Excel interaktif berbasis data dummy, menampilkan laporan dan grafik performa kerja.</p>
+            <span class="badge bg-warning text-dark mb-2">Selesai</span><br>
+            <a href="https://docs.google.com/spreadsheets/d/14ntRDGH8FMv4oNigUgH26wot2u6nQEdY/edit?pli=1&gid=1648996664#gid=1648996664" target="_blank" class="btn btn-outline-primary btn-sm">Lihat Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: LKPD Digital -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-primary text-white">
+          <div class="card-body text-start">
+            <h5 class="fw-bold">LKPD Digital</h5>
+            <p class="small mb-3">Lembar Kerja Peserta Didik digital berbasis Google Form & PDF interaktif untuk pembelajaran daring.</p>
+            <span class="badge bg-warning text-dark mb-2">Selesai</span><br>
+            <a href="https://maediefendi.github.io/LKPD---Based_Leraning/" target="_blank" class="btn btn-outline-light btn-sm">Lihat LKPD</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Section: Sertifikat - Modal -->
+<section class="py-5 bg-white" id="sertifikat" >
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Sertifikat</h2>
+    <p class="mb-5 text-muted">Klik sertifikat untuk melihat lebih detail.</p>
+    
+    <div class="row g-4 justify-content-center">
+      <!-- Sertifikat 1 -->
+      <div class="col-md-6 col-lg-5" data-aos="fade-right"data-aos-delay="100">
+        <div class="card shadow-sm h-100">
+          <img src="asset/Sertifikat Data Entry.png" class="card-img-top" alt="Data Entry" data-bs-toggle="modal" data-bs-target="#modalSertifikat1" style="cursor:pointer;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Sertifikat Data Entry</h5>
+            <p class="card-text small text-muted">CV. Kahe Group | 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sertifikat 2 -->
+      <div class="col-md-6 col-lg-5" data-aos="fade-left"data-aos-delay="100">
+        <div class="card shadow-sm h-100">
+          <img src="asset/Sertifikat.jpg" class="card-img-top" alt="Visualisasi Data" data-bs-toggle="modal" data-bs-target="#modalSertifikat2" style="cursor:pointer;">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Sertifikat Software Engineer</h5>
+            <p class="card-text small text-muted">Revou.id | 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Sertifikat 1 -->
+<div class="modal fade" id="modalSertifikat1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <img src="asset/Sertifikat Data Entry.png" class="img-fluid rounded" alt="Data Entry">
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sertifikat 2 -->
+<div class="modal fade" id="modalSertifikat2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <img src="asset/Sertifikat.jpg" class="img-fluid rounded" alt="Visualisasi Data">
+    </div>
+  </div>
+</div>
+
+
+
+<section id="service" class="footer-section text-white text-center">
+  <div class="container">
+    <h2 class="mb-5 fw-bold">Keahlian</h2>
+    <div class="row g-4">
+
+      <!-- Frontend Development -->
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-right"data-aos-delay="100">
+        <div class="bg-white text-dark rounded-4 p-4 h-100 card-equal">
+          <h5 class="fw-bold text-primary mb-2">Frontend Development</h5>
+          <p class="small">Membangun antarmuka web yang interaktif dan responsif menggunakan teknologi modern.</p>
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-warning text-dark custom-hover w-100">Hubungi Sekarang</a>
+        </div>
+      </div>
+
+      <!-- Administrasi Digital -->
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-left"data-aos-delay="100">
+        <div class="bg-white text-dark rounded-4 p-4 h-100 card-equal">
+          <h5 class="fw-bold text-primary mb-2">Administrasi Digital</h5>
+          <p class="small">Manajemen data dan dokumen administrasi secara akurat dan efisien.</p>
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-warning text-dark custom-hover w-100">Hubungi Sekarang</a>
+        </div>
+      </div>
+
+      <!-- Visualisasi Data -->
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-right"data-aos-delay="100">
+        <div class="bg-white text-dark rounded-4 p-4 h-100 card-equal">
+          <h5 class="fw-bold text-primary mb-2">Visualisasi Data</h5>
+          <p class="small">Menyulap data menjadi informasi visual yang mudah dipahami.</p>
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-warning text-dark custom-hover w-100">Hubungi Sekarang</a>
+        </div>
+      </div>
+
+      <!-- Desain Komunikasi Internal -->
+      <div class="col-12 col-sm-6 col-lg-3"data-aos="fade-left"data-aos-delay="100">
+        <div class="bg-white text-dark rounded-4 p-4 h-100 card-equal">
+          <h5 class="fw-bold text-primary mb-2">Desain Komunikasi Internal</h5>
+          <p class="small">Membuat desain visual untuk mendukung komunikasi internal perusahaan.</p>
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-warning text-dark custom-hover w-100">Hubungi Sekarang</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Section: Pendidikan (Keren) -->
+<section id="education" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold">Riwayat Pendidikan</h2>
+      <p class="text-muted">Perjalanan pendidikan saya yang menjadi fondasi dalam dunia teknologi dan digital.</p>
+    </div>
+
+    <div class="row justify-content-center align-items-stretch gy-4">
+
+      <!-- Universitas Terbuka -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-start bg-white shadow rounded-4 p-4 h-100 border-start border-4 border-primary" data-aos="fade-right"data-aos-delay="100">
+          <img src="asset/logo-ut-small-transparent-300x226.png.webp" alt="Logo UT" width="50" class="me-4 flex-shrink-0" />
+          <div>
+            <h5 class="fw-bold mb-1">Universitas Terbuka</h5>
+            <p class="text-muted mb-1 small">Prodi Sistem Informasi</p>
+            <span class="badge bg-primary mb-2">Mahasiswa Aktif</span>
+            <p class="small mb-0"><i class="bi bi-calendar-event me-1"></i> Tahun Masuk: 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SMAN 1 Jamblang -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-start bg-white shadow rounded-4 p-4 h-100 border-start border-4 border-warning" data-aos="fade-left"data-aos-delay="100">
+          <img src="asset/images-removebg-preview.png" alt="Logo SMA" width="50" class="me-4 flex-shrink-0" />
+          <div>
+            <h5 class="fw-bold mb-1">SMAN 1 Jamblang</h5>
+            <p class="text-muted mb-1 small">Jurusan Ilmu Pengetahuan Sosial</p>
+            <span class="badge bg-warning text-dark mb-2">Lulus</span>
+            <p class="small mb-1"><i class="bi bi-calendar-event me-1"></i> Tahun: 2021 – 2024</p>
+            <p class="small mb-0"><i class="bi bi-bar-chart-line me-1"></i> Nilai Akhir: <strong>87,34</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Kontak -->
+<!-- <section id="kontak" class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Hubungi Kami</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6" data-aos="fade-up">
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="mb-3">
+            <input type="text" name="nama" class="form-control" placeholder="Nama Anda" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Email Anda" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="pesan" class="form-control" rows="4" placeholder="Pesan Anda" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-warning">Kirim Pesan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+ <footer id="kontak" class="footer-section text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      
+      <!-- Logo & Deskripsi -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Maedi Efendi</h5>
+        <p class="small">
+          Portfolio digital yang mencerminkan keahlian saya di bidang Frontend Development, Administrasi Digital, Visualisasi Data, 
+          serta Desain Komunikasi Internal untuk kebutuhan bisnis dan profesional.
+        </p>
+      </div>
+
+
+
+      <!-- Menu Navigasi -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-semibold">Menu</h6>
+        <ul class="list-unstyled footer-nav">
+          <li><a href="#home" class="text-white text-decoration-none small">Beranda</a></li>
+          <li><a href="#about" class="text-white text-decoration-none small">Tentang saya</a></li>
+          <li><a href="#project" class="text-white text-decoration-none small">Project</a></li>
+          <li><a href="#service" class="text-white text-decoration-none small">Keahlian</a></li>
+          <li><a href="#kontak" class="text-white text-decoration-none small">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Layanan -->
+<div class="col-md-3 mb-4">
+  <h6 class="fw-semibold">Layanan Saya</h6>
+  <ul class="list-unstyled small">
+    <li>Frontend Development (HTML, CSS, JS)</li>
+    <li>Manajemen & Entry Data</li>
+    <li>Visualisasi Data (Excel, Data Studio)</li>
+    <li>Desain Komunikasi Internal</li>
+    <li>Pembuatan Sertifikat & ID Card</li>
+  </ul>
+</div>
+
+
+      <!-- Kontak -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-semibold">Kontak</h6>
+        <p class="small mb-1">📞 0821-1988-3246</p>
+        <p class="small mb-1">✉️ maedi100kc@gmail.com</p>
+        <p class="small">📍 Cirebon, Indonesia</p>
+      
+      </div>
+    </div>
+
+    <hr class="border-top border-white" />
+
+    <div class="text-center">
+      <p class="mb-0 small">&copy; 2025 <strong>Maedi Efendi</strong>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<!-- Tombol Scroll To Top -->
+<button onclick="scrollToTop()" id="scrollTopBtn" title="Kembali ke atas">
+  <i class="bi bi-chevron-up"></i>
+</button>
+
+
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 1000,         // Durasi animasi (dalam ms), misalnya 1000 = 1 detik
+    easing: 'ease-in-out',  // Jenis easing animasi
+    once: true,             // Animasi hanya muncul sekali
+    delay: 100              // Delay awal (bisa diatur manual per elemen juga)
+  });
+</script>
+<script>
+window.onscroll = function () {
+  const btn = document.getElementById("scrollTopBtn");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn.style.display = "flex";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+  
+</body>
+
+</html>
