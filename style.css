@@ -505,3 +505,34 @@ section + section {
   }
 }
 
+/* CONTACT FORM */
+.contact-box {
+  background-color: #fff;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* INPUT STYLE */
+.contact-box .form-control {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.contact-box .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: none;
+}
+
+/* BUTTON */
+.contact-box .btn-primary {
+  border-radius: 30px;
+  padding: 12px;
+}
