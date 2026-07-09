@@ -5,703 +5,1185 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Maedi | Staff Logistik & Data System</title>
+  <title>Maedi | Logistics Administration & Data System</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-  </style>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Maedi</a>
+  <!-- MOBILE TOPBAR -->
+  <header class="mobile-topbar">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka Menu">
+      <i class="bi bi-list"></i>
+    </button>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <div class="mobile-brand">
+      <strong>Maedi</strong>
+      <span>Portfolio</span>
+    </div>
+  </header>
 
-      <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">Tentang saya</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
-          <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Pendidikan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+  <!-- APP WRAPPER -->
+  <div class="app-layout">
 
-          <li class="nav-item ms-lg-3">
-            <a href="asset/CV_Maedi.pdf" class="btn btn-warning">Resume</a>
-          </li>
-        </ul>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar-header">
+        <h1>Maedi</h1>
+        <p>Staff Logistik<br>& Data System</p>
+        <span class="sidebar-line"></span>
       </div>
-    </div>
-  </nav>
 
-  <!-- Offcanvas Menu Mobile -->
-  <div class="offcanvas offcanvas-start bg-primary text-white" tabindex="-1" id="mobileMenu">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title fw-bold">Menu</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      <div class="profile-card">
+        <div class="profile-image-wrap">
+          <img src="asset/Medi.jpeg" alt="Foto Profil Maedi">
+        </div>
+
+        <h2>Maedi</h2>
+        <p>Logistics Administration<br>Project Control</p>
+      </div>
+
+      <nav class="sidebar-menu">
+
+        <button class="menu-link active" data-page="home">
+          <i class="bi bi-house-door"></i>
+          <span>Beranda</span>
+        </button>
+
+        <button class="menu-link" data-page="about">
+          <i class="bi bi-person"></i>
+          <span>Tentang Saya</span>
+        </button>
+
+        <button class="menu-link" data-page="experience">
+          <i class="bi bi-briefcase"></i>
+          <span>Pengalaman</span>
+        </button>
+
+        <button class="menu-link" data-page="project">
+          <i class="bi bi-folder2-open"></i>
+          <span>Project</span>
+        </button>
+
+        <button class="menu-link" data-page="skills">
+          <i class="bi bi-tools"></i>
+          <span>Keahlian</span>
+        </button>
+
+        <button class="menu-link" data-page="education">
+          <i class="bi bi-mortarboard"></i>
+          <span>Pendidikan</span>
+        </button>
+
+        <button class="menu-link" data-page="contact">
+          <i class="bi bi-envelope"></i>
+          <span>Kontak</span>
+        </button>
+
+      </nav>
+
+      <a href="asset/Curiculum Vitae Maedi.pdf" class="download-cv" target="_blank">
+        <i class="bi bi-download"></i>
+        Download CV
+      </a>
+
+      <div class="sidebar-social">
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://wa.me/6282119883246" target="_blank" aria-label="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="mailto:maedi100kc@gmail.com" aria-label="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+
+    </aside>
+
+    <!-- SIDEBAR OVERLAY MOBILE -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- BERANDA -->
+<section class="page active" id="home">
+
+  <!-- HERO DASHBOARD DESIGN -->
+  <div class="home-hero-dashboard">
+
+    <!-- HERO LEFT -->
+    <div class="home-hero-left">
+
+      <span class="hero-small-badge">
+        <i class="bi bi-stars"></i>
+        Halo, saya Maedi
+      </span>
+
+      <h1>
+        Logistics Administration,<br>
+        Project Control &<br>
+        <span>Data System</span>
+      </h1>
+
+      <p>
+        Membantu proses operasional proyek melalui pengelolaan dokumen,
+        monitoring progres, validasi data, reporting, dan pengembangan sistem sederhana
+        untuk meningkatkan efisiensi serta akurasi kerja.
+      </p>
+
+      <div class="hero-action-row">
+        <a href="https://wa.me/6282119883246" target="_blank" class="hero-btn-primary">
+          <i class="bi bi-whatsapp"></i>
+          Hubungi Saya
+        </a>
+
+        <button class="hero-btn-outline menu-trigger" data-page="project">
+          <i class="bi bi-folder2-open"></i>
+          Lihat Project Saya
+        </button>
+      </div>
+
     </div>
 
-    <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link text-dark" href="#home">Beranda</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#about">Tentang Saya</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#skills">Keahlian</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#experience">Pengalaman</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#project">Project</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#education">Pendidikan</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#kontak">Kontak</a></li>
+    <!-- HERO RIGHT -->
+    <div class="home-hero-right">
 
-        <li class="nav-item mt-3">
-          <a href="asset/CV_Maedi.pdf" class="btn btn-warning w-100">Resume</a>
-        </li>
-      </ul>
+      <div class="right-grid-pattern"></div>
+      <div class="world-dot-pattern"></div>
+
+      <div class="hero-curve-shape"></div>
+
+      <!-- LEFT MINI STATUS -->
+      <div class="status-stack">
+
+        <div class="status-item">
+          <div class="status-icon">
+            <i class="bi bi-folder-check"></i>
+          </div>
+          <div>
+            <strong>Dokumen</strong>
+            <span>Terorganisir</span>
+          </div>
+        </div>
+
+        <div class="status-item">
+          <div class="status-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <div>
+            <strong>Data Valid</strong>
+            <span>& Akurat</span>
+          </div>
+        </div>
+
+        <div class="status-item">
+          <div class="status-icon">
+            <i class="bi bi-graph-up-arrow"></i>
+          </div>
+          <div>
+            <strong>Laporan</strong>
+            <span>Real-time</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CENTER DASHBOARD -->
+      <div class="dashboard-screen">
+
+        <div class="screen-top">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="screen-content">
+
+          <div class="screen-chart-large">
+            <div class="chart-line"></div>
+            <div class="chart-dot dot-1"></div>
+            <div class="chart-dot dot-2"></div>
+            <div class="chart-dot dot-3"></div>
+          </div>
+
+          <div class="screen-side">
+            <div class="mini-panel">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="mini-bar-panel">
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- DONUT -->
+      <div class="donut-visual">
+        <div class="donut-hole"></div>
+      </div>
+
+      <!-- RIGHT FLOATING CARDS -->
+      <div class="info-card accuracy-card">
+        <span>Data Accuracy</span>
+        <strong>98.6%</strong>
+        <div class="bar-visual">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+        <small>↑ 12% dari bulan lalu</small>
+      </div>
+
+      <div class="info-card monitoring-card">
+        <span>Project Monitoring</span>
+        <strong>15–20+</strong>
+        <small>Project Dimonitor</small>
+        <div class="wave-line"></div>
+      </div>
+
     </div>
+
   </div>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section text-white d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
+  <!-- STATISTIC CARDS -->
+  <div class="home-dashboard-stats">
 
-        <div class="col-md-6" data-aos="fade-right">
-          <p class="small fw-semibold mb-1">
-            👨‍🎓 Mahasiswa D4 Kearsipan | Staff Logistik & Administrasi Data
-          </p>
-
-          <h1 class="display-5 fw-bold mb-3">
-            Logistics Administration, Project Control & Data System
-          </h1>
-
-          <p class="mb-3">
-            Profesional administrasi dan logistik dengan pengalaman pada project administration,
-            project control, document control, reporting, validasi data, serta administrasi
-            pengadaan material. Terbiasa mengelola dokumen PO, DO, GR, EAF, LPJ dan membuat
-            sistem sederhana untuk meningkatkan efisiensi kerja.
-          </p>
-
-          <div class="d-flex gap-3 flex-wrap">
-            <span class="badge bg-light text-primary">Project Administration</span>
-            <span class="badge bg-light text-primary">Project Control</span>
-            <span class="badge bg-light text-primary">Data Reporting</span>
-            <span class="badge bg-light text-primary">Logistics Administration</span>
-          </div>
-        </div>
-
-        <div class="col-md-6 text-center" data-aos="fade-left">
-          <img src="asset/DEV2-removebg-preview.png" alt="Hero" class="img-fluid hero-img mt-4 mt-md-0" />
-        </div>
-
+    <div class="dashboard-stat-card">
+      <div class="dashboard-stat-icon">
+        <i class="bi bi-bar-chart-line"></i>
+      </div>
+      <div>
+        <h3>15–20+</h3>
+        <p>Project Dimonitor</p>
+        <small>Berbagai proyek berhasil dimonitor & dikendalikan</small>
       </div>
     </div>
-  </section>
 
-  <!-- Tools & System -->
-  <section class="py-5 bg-with">
-    <div class="container-fluid px-0 overflow-hidden">
+    <div class="dashboard-stat-card">
+      <div class="dashboard-stat-icon">
+        <i class="bi bi-layers"></i>
+      </div>
+      <div>
+        <h3>3+</h3>
+        <p>Sistem Dibuat</p>
+        <small>Sistem sederhana untuk mendukung operasional</small>
+      </div>
+    </div>
 
-      <div class="text-center mb-4">
-        <h2 class="fw-bold d-inline-block">Tools & System</h2>
+    <div class="dashboard-stat-card">
+      <div class="dashboard-stat-icon">
+        <i class="bi bi-file-earmark-text"></i>
+      </div>
+      <div>
+        <h3>PO, DO, GR,<br>EAF, LPJ</h3>
+        <p>Administration</p>
+        <small>Pengelolaan dokumen secara terstruktur</small>
+      </div>
+    </div>
+
+    <div class="dashboard-stat-card">
+      <div class="dashboard-stat-icon">
+        <i class="bi bi-table"></i>
+      </div>
+      <div>
+        <h3>Excel, Sheets,<br>Apps Script</h3>
+        <p>Reporting</p>
+        <small>Otomasi & laporan akurat untuk pengambilan keputusan</small>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HIGHLIGHT -->
+  <div class="home-dashboard-highlight">
+
+    <div class="dashboard-section-title">
+      <span></span>
+      <h2>Highlight</h2>
+    </div>
+
+    <div class="dashboard-highlight-grid">
+
+      <button class="dashboard-highlight-card menu-trigger" data-page="about">
+        <div class="dashboard-highlight-icon">
+          <i class="bi bi-person-circle"></i>
+        </div>
+        <h3>Tentang Saya</h3>
+        <p>Lihat profil, nilai kerja, dan fokus profesional saya.</p>
+        <span class="highlight-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </span>
+      </button>
+
+      <button class="dashboard-highlight-card menu-trigger" data-page="experience">
+        <div class="dashboard-highlight-icon">
+          <i class="bi bi-briefcase"></i>
+        </div>
+        <h3>Pengalaman</h3>
+        <p>Perjalanan karier dan tanggung jawab utama.</p>
+        <span class="highlight-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </span>
+      </button>
+
+      <button class="dashboard-highlight-card menu-trigger" data-page="project">
+        <div class="dashboard-highlight-icon">
+          <i class="bi bi-folder2-open"></i>
+        </div>
+        <h3>Project</h3>
+        <p>Project sistem dan solusi yang telah dibuat.</p>
+        <span class="highlight-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </span>
+      </button>
+
+      <button class="dashboard-highlight-card menu-trigger" data-page="skills">
+        <div class="dashboard-highlight-icon">
+          <i class="bi bi-tools"></i>
+        </div>
+        <h3>Keahlian</h3>
+        <p>Kemampuan, tools, dan teknologi yang dikuasai.</p>
+        <span class="highlight-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </span>
+      </button>
+
+      <button class="dashboard-highlight-card menu-trigger" data-page="education">
+        <div class="dashboard-highlight-icon">
+          <i class="bi bi-mortarboard"></i>
+        </div>
+        <h3>Pendidikan</h3>
+        <p>Riwayat pendidikan formal saya.</p>
+        <span class="highlight-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </span>
+      </button>
+
+      <button class="dashboard-highlight-card menu-trigger" data-page="contact">
+        <div class="dashboard-highlight-icon">
+          <i class="bi bi-envelope"></i>
+        </div>
+        <h3>Kontak</h3>
+        <p>Informasi kontak dan media komunikasi.</p>
+        <span class="highlight-arrow">
+          <i class="bi bi-arrow-right"></i>
+        </span>
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+      <!-- TENTANG SAYA -->
+<section class="page" id="about">
+
+  <!-- ABOUT HEADER -->
+  <div class="about-pro-header">
+
+    <div class="about-title-box">
+      <span class="about-kicker">PROFIL</span>
+      <h2>Tentang Saya</h2>
+      <p>
+        Ringkasan profil profesional, fokus kerja, dan nilai utama yang saya gunakan
+        dalam mendukung proses operasional.
+      </p>
+      <span class="about-title-line"></span>
+    </div>
+
+    <div class="about-metric-box">
+
+      <div class="about-metric-item">
+        <div class="metric-icon">
+          <i class="bi bi-briefcase"></i>
+        </div>
+        <h3>3+</h3>
+        <p>Tahun</p>
+        <small>Pengalaman</small>
       </div>
 
-      <div class="marquee">
-        <div class="marquee-inner">
-
-          <div class="marquee-group">
-            <div class="item">
-              <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png">
-              <span>Excel</span>
-            </div>
-            <div class="item">
-              <img src="asset/set.png">
-              <span>Sheets</span>
-            </div>
-            <div class="item">
-              <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png">
-              <span>Reporting</span>
-            </div>
-            <div class="item">
-              <img src="asset/5129557.png">
-              <span>ERP</span>
-            </div>
-            <div class="item">
-              <img src="asset/Google_Apps_Script.svg.png">
-              <span>Apps Script</span>
-            </div>
-            <div class="item">
-              <img src="asset/HTML5_logo_and_wordmark.svg.png">
-              <span>HTML</span>
-            </div>
-            <div class="item">
-              <img src="asset/CSS3_logo_and_wordmark.svg.png">
-              <span>CSS</span>
-            </div>
-          </div>
-
-          <div class="marquee-group">
-            <div class="item">
-              <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png">
-              <span>Excel</span>
-            </div>
-            <div class="item">
-              <img src="asset/set.png">
-              <span>Sheets</span>
-            </div>
-            <div class="item">
-              <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png">
-              <span>Reporting</span>
-            </div>
-            <div class="item">
-              <img src="asset/5129557.png">
-              <span>ERP</span>
-            </div>
-            <div class="item">
-              <img src="asset/Google_Apps_Script.svg.png">
-              <span>Apps Script</span>
-            </div>
-            <div class="item">
-              <img src="asset/HTML5_logo_and_wordmark.svg.png">
-              <span>HTML</span>
-            </div>
-            <div class="item">
-              <img src="asset/CSS3_logo_and_wordmark.svg.png">
-              <span>CSS</span>
-            </div>
-          </div>
-
+      <div class="about-metric-item">
+        <div class="metric-icon">
+          <i class="bi bi-list-check"></i>
         </div>
+        <h3>20+</h3>
+        <p>Proyek</p>
+        <small>Telah Dikerjakan</small>
+      </div>
+
+      <div class="about-metric-item">
+        <div class="metric-icon">
+          <i class="bi bi-bar-chart-line"></i>
+        </div>
+        <h3>100%</h3>
+        <p>Komitmen</p>
+        <small>Kualitas & Integritas</small>
+      </div>
+
+      <div class="about-metric-item">
+        <div class="metric-icon">
+          <i class="bi bi-people"></i>
+        </div>
+        <h3>Kolaboratif</h3>
+        <p>Tim & Stakeholder</p>
+        <small>Pendekatan Kerja</small>
       </div>
 
     </div>
-  </section>
 
-  <!-- Tentang Saya -->
-  <section id="about" class="py-5 bg-with">
-    <div class="container">
-      <div class="row align-items-center g-5">
+  </div>
 
-        <div class="col-lg-6" data-aos="fade-right">
-          <h2 class="fw-bold mb-3">Tentang Saya</h2>
+  <!-- ABOUT MAIN -->
+  <div class="about-pro-main">
 
-          <p>
-            Saya adalah profesional administrasi dan logistik dengan pengalaman dalam
-            <strong>project administration, project control, reporting, document control, validasi data,</strong>
-            serta proses administrasi pengadaan material. Saat ini saya sedang menempuh pendidikan
-            <strong>D4 Kearsipan</strong> di Universitas Terbuka.
-          </p>
+    <!-- VISUAL TANPA FOTO / ASSET -->
+    <div class="about-visual-card">
 
-          <p>
-            Dalam pekerjaan, saya terbiasa mendukung kebutuhan operasional proyek melalui pengelolaan data,
-            penyusunan laporan progres, monitoring action plan, pengelolaan dokumen proyek, serta koordinasi
-            dengan Project Manager, tim lapangan, purchasing, supplier, dan vendor.
-          </p>
+      <div class="about-visual-bg"></div>
 
-          <p>
-            Pada bidang logistik, saya terbiasa melakukan pengecekan ketersediaan material, mengelola dokumen
-            <strong>Purchase Order (PO), Delivery Order (DO), Goods Receipt (GR), EAF, dan LPJ</strong>,
-            serta memastikan data administrasi tetap akurat, terdokumentasi, dan mudah ditelusuri.
-          </p>
-
-          <ul>
-            <li>Administrasi proyek, monitoring progres, MoM, action plan, dan document control</li>
-            <li>Administrasi logistik: PO, DO, GR, EAF, LPJ, supplier dan vendor coordination</li>
-            <li>Validasi, sinkronisasi, dan pengolahan data operasional</li>
-            <li>Pengolahan data menggunakan Microsoft Excel dan Google Sheets</li>
-            <li>Pembuatan dashboard dan visualisasi data sebagai bahan evaluasi</li>
-            <li>Pengembangan sistem sederhana berbasis HTML, CSS, JavaScript, Bootstrap, dan Google Apps Script</li>
-            <li>Integrasi Google Sheets dan Google Drive untuk otomasi administrasi</li>
-            <li>Problem solving, analisis 4M, koordinasi lintas fungsi, dan attention to detail</li>
-          </ul>
-
-          <p>
-            Fokus karier saya berada pada bidang
-            <strong>administrasi, logistik, document control, data reporting, dan system automation</strong>
-            untuk mendukung proses kerja yang lebih rapi, cepat, akurat, dan terukur.
-          </p>
-
-          <a href="https://wa.me/6282119883246" target="_blank" rel="noopener noreferrer" class="btn btn-warning mt-3">
-            Hubungi Saya
-          </a>
-        </div>
-
-        <div class="col-lg-6 text-center" data-aos="fade-left">
-          <img src="asset/Data analysis-amico (1).png" alt="Administrasi, logistik, pengolahan data, dan sistem"
-            class="img-fluid rounded shadow" />
-        </div>
-
+      <div class="visual-folder">
+        <i class="bi bi-folder2-open"></i>
+        <span>DATA</span>
       </div>
+
+      <div class="visual-laptop">
+        <div class="laptop-screen">
+          <div class="screen-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="screen-chart">
+            <i style="height: 42%;"></i>
+            <i style="height: 62%;"></i>
+            <i style="height: 48%;"></i>
+            <i style="height: 78%;"></i>
+            <i style="height: 68%;"></i>
+          </div>
+
+          <div class="screen-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+
+      <div class="visual-document doc-one">
+        <i class="bi bi-file-earmark-check"></i>
+        <span>PO / DO / GR</span>
+      </div>
+
+      <div class="visual-document doc-two">
+        <i class="bi bi-clipboard-data"></i>
+        <span>Report</span>
+      </div>
+
+      <div class="visual-shield">
+        <i class="bi bi-shield-check"></i>
+      </div>
+
+      <div class="visual-gear">
+        <i class="bi bi-gear"></i>
+      </div>
+
+      <div class="visual-search">
+        <i class="bi bi-search"></i>
+      </div>
+
+      <div class="about-focus-tabs">
+        <span>Fokus Saya</span>
+        <p><i class="bi bi-database"></i> Data</p>
+        <p><i class="bi bi-file-earmark-text"></i> Dokumen</p>
+        <p><i class="bi bi-gear"></i> Sistem</p>
+        <p><i class="bi bi-diagram-3"></i> Proses</p>
+        <p><i class="bi bi-award"></i> Kualitas</p>
+      </div>
+
     </div>
-  </section>
 
-  <!-- Pengalaman Kerja -->
-  <section id="experience" class="py-5 bg-with text-center">
-    <div class="container">
-      <h2 class="section-title mb-3">Pengalaman Kerja</h2>
+    <!-- CONTENT CARD -->
+    <div class="about-profile-card">
 
-      <p class="mb-4">
-        Pengalaman kerja saya berfokus pada administrasi logistik, project administration,
-        project control, pengolahan data, reporting, dan koordinasi operasional.
+      <h3>Logistics Administration, Project Administration & Data System</h3>
+      <span class="about-card-line"></span>
+
+      <p>
+        Saya adalah profesional administrasi dan logistik dengan pengalaman dalam
+        project administration, project control, reporting, document control,
+        validasi data, serta proses administrasi pengadaan material.
       </p>
 
-      <div class="row justify-content-center g-4">
+      <p>
+        Dalam pekerjaan, saya terbiasa mendukung kebutuhan operasional proyek melalui
+        pengelolaan data, penyusunan laporan progres, monitoring action plan,
+        pengelolaan dokumen proyek, serta koordinasi dengan Project Manager,
+        tim lapangan, purchasing, supplier, dan vendor.
+      </p>
 
-        <!-- Staff Logistik -->
-        <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
-          <div class="footer-section text-white rounded-4 p-4">
-            <h5 class="fw-bold"><i class="bi bi-building"></i> PT Raja Sukses Propertindo</h5>
-            <p class="mt-2 mb-0">
-              Periode: Juli 2026 – Sekarang<br>
-              Posisi: Staff Logistik
-            </p>
-          </div>
+      <p>
+        Pada bidang logistik, saya terbiasa melakukan pengecekan ketersediaan material,
+        mengelola dokumen Purchase Order, Delivery Order, Goods Receipt, EAF, dan LPJ,
+        serta memastikan data administrasi tetap akurat dan mudah ditelusuri.
+      </p>
+
+      <div class="core-skill-box">
+        <h4>Bidang Keahlian Inti</h4>
+
+        <div class="core-skill-list">
+          <span><i class="bi bi-check-circle"></i> Project Administration</span>
+          <span><i class="bi bi-check-circle"></i> Logistics Administration</span>
+          <span><i class="bi bi-check-circle"></i> Document Control</span>
+          <span><i class="bi bi-check-circle"></i> Reporting & Monitoring</span>
+          <span><i class="bi bi-check-circle"></i> Data Management</span>
+          <span><i class="bi bi-check-circle"></i> System & Automation</span>
+          <span><i class="bi bi-check-circle"></i> Process Improvement</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- VALUE CARDS -->
+  <div class="about-value-pro-grid">
+
+    <div class="about-value-pro-card">
+      <div class="value-number">01</div>
+      <div class="value-icon-pro">
+        <i class="bi bi-bullseye"></i>
+      </div>
+
+      <h3>Teliti & Akurat</h3>
+      <p>
+        Mengutamakan ketepatan data, dokumen, dan hasil pelaporan.
+      </p>
+
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Validasi data secara detail dan konsisten</li>
+        <li><i class="bi bi-check-circle-fill"></i> Dokumentasi lengkap dan mudah ditelusuri</li>
+        <li><i class="bi bi-check-circle-fill"></i> Meminimalkan kesalahan dan risiko operasional</li>
+      </ul>
+    </div>
+
+    <div class="about-value-pro-card">
+      <div class="value-number">02</div>
+      <div class="value-icon-pro">
+        <i class="bi bi-diagram-3"></i>
+      </div>
+
+      <h3>Terstruktur</h3>
+      <p>
+        Bekerja dengan alur yang rapi, sistematis, dan mudah ditelusuri.
+      </p>
+
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Membuat alur kerja yang efisien</li>
+        <li><i class="bi bi-check-circle-fill"></i> Mengelola prioritas dan timeline dengan baik</li>
+        <li><i class="bi bi-check-circle-fill"></i> Menjaga kerapian dokumen dan data</li>
+      </ul>
+    </div>
+
+    <div class="about-value-pro-card">
+      <div class="value-number">03</div>
+      <div class="value-icon-pro">
+        <i class="bi bi-graph-up-arrow"></i>
+      </div>
+
+      <h3>Berorientasi Hasil</h3>
+      <p>
+        Fokus pada penyelesaian tugas, monitoring, dan pencapaian target.
+      </p>
+
+      <ul>
+        <li><i class="bi bi-check-circle-fill"></i> Memantau progres dan action plan</li>
+        <li><i class="bi bi-check-circle-fill"></i> Memberikan laporan informatif dan tepat waktu</li>
+        <li><i class="bi bi-check-circle-fill"></i> Berkomitmen pada hasil terbaik</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- TOOLS & FOCUS -->
+  <div class="about-bottom-grid">
+
+    <div class="about-tools-card">
+      <div class="about-bottom-title">
+        <i class="bi bi-gear"></i>
+        <h3>Tools & Software</h3>
+      </div>
+
+      <div class="about-tools-list">
+        <div>
+          <i class="bi bi-file-earmark-spreadsheet"></i>
+          <span>Excel</span>
         </div>
 
-        <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
-          <div class="footer-section text-white rounded-4 p-4 text-start">
-            <h5 class="fw-bold"><i class="bi bi-box-seam"></i> Ruang Lingkup Pekerjaan</h5>
-            <ul class="mt-2 mb-0 ps-3">
-              <li>Pengecekan ketersediaan material kepada supplier untuk kebutuhan operasional proyek</li>
-              <li>Membuat dan mengelola dokumen Purchase Order (PO), Delivery Order (DO), dan Goods Receipt (GR)</li>
-              <li>Mengelola administrasi penjualan material kepada vendor sesuai kebutuhan perusahaan</li>
-              <li>Menyusun pengajuan EAF dan LPJ untuk administrasi biaya dan pertanggungjawaban</li>
-              <li>Koordinasi dengan supplier, vendor, purchasing, dan tim internal</li>
-              <li>Validasi data administrasi logistik agar dokumen tetap akurat dan terdokumentasi</li>
-            </ul>
-          </div>
+        <div>
+          <i class="bi bi-file-earmark-word"></i>
+          <span>Word</span>
         </div>
 
-        <!-- Admin Project -->
-        <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
-          <div class="footer-section text-white rounded-4 p-4">
-            <h5 class="fw-bold"><i class="bi bi-building"></i> PT Raja Sukses Propertindo</h5>
-            <p class="mt-2 mb-0">
-              Periode: Juli 2025 – Juli 2026<br>
-              Posisi: Admin Project
-            </p>
-          </div>
+        <div>
+          <i class="bi bi-file-earmark-ppt"></i>
+          <span>PowerPoint</span>
         </div>
 
-        <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
-          <div class="footer-section text-white rounded-4 p-4 text-start">
-            <h5 class="fw-bold"><i class="bi bi-clipboard-data"></i> Ruang Lingkup Pekerjaan</h5>
-            <ul class="mt-2 mb-0 ps-3">
-              <li>Monitoring dan pengendalian progres ±15–20 proyek housing dan infrastruktur</li>
-              <li>Mendukung administrasi operasional Project Manager dalam pengendalian data dan dokumen proyek</li>
-              <li>Menyusun laporan progres, rekap kendala, Minutes of Meeting, dan monitoring action plan</li>
-              <li>Input, validasi, dan sinkronisasi data antara sistem internal dengan kondisi aktual lapangan</li>
-              <li>Mengelola progress report, dokumentasi lapangan, laporan kendala, dan evaluasi vendor</li>
-              <li>Membantu otomatisasi pelaporan menggunakan Google Apps Script, Google Sheets, dan Google Drive</li>
-            </ul>
-          </div>
+        <div>
+          <i class="bi bi-cloud-check"></i>
+          <span>Drive</span>
         </div>
 
-        <!-- Data Entry -->
-        <div class="col-md-4" data-aos="fade-right" data-aos-delay="300">
-          <div class="footer-section text-white rounded-4 p-4">
-            <h5 class="fw-bold"><i class="bi bi-building"></i> CV Kahe Group</h5>
-            <p class="mt-2 mb-0">
-              Periode: Juli 2024 – Juli 2025<br>
-              Posisi: Data Entry
-            </p>
-          </div>
+        <div>
+          <i class="bi bi-bar-chart"></i>
+          <span>Reporting</span>
         </div>
 
-        <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
-          <div class="footer-section text-white rounded-4 p-4 text-start">
-            <h5 class="fw-bold"><i class="bi bi-table"></i> Ruang Lingkup Pekerjaan</h5>
-            <ul class="mt-2 mb-0 ps-3">
-              <li>Input dan validasi data dengan tingkat akurasi tinggi</li>
-              <li>Pengolahan data menggunakan Microsoft Excel, termasuk VLOOKUP, HLOOKUP, dan Pivot Table</li>
-              <li>Menyusun laporan berkala dan visualisasi data untuk bahan analisis manajemen</li>
-              <li>Mengelola database karyawan dan administrasi HR secara terstruktur</li>
-            </ul>
-          </div>
+        <div>
+          <i class="bi bi-code-square"></i>
+          <span>Apps Script</span>
         </div>
-
       </div>
     </div>
-  </section>
 
-  <!-- Keahlian -->
-  <section id="skills" class="py-5 bg-with text-center">
-    <div class="container">
-
-      <div class="text-center mb-5" data-aos="fade-up">
-        <h2 class="fw-bold">Keahlian</h2>
-        <p class="text-muted mx-auto" style="max-width: 750px;">
-          Kombinasi kemampuan administrasi proyek, administrasi logistik, pengelolaan dokumen,
-          pengolahan data, serta pengembangan sistem untuk mendukung efisiensi dan akurasi pekerjaan operasional.
-        </p>
+    <div class="about-focus-card">
+      <div class="about-bottom-title">
+        <i class="bi bi-crosshair"></i>
+        <h3>Fokus Pekerjaan</h3>
       </div>
 
-      <div class="row g-4 justify-content-center">
+      <div class="about-focus-list">
+        <span>Project Control</span>
+        <span>Procurement Support</span>
+        <span>Document Management</span>
+        <span>Logistics Operation</span>
+        <span>Stakeholder Coordination</span>
+      </div>
+    </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
-              <i class="bi bi-clipboard-check"></i>
-            </div>
-            <h5 class="fw-bold mb-3">Project Administration</h5>
-            <p class="small mb-0">
-              Monitoring progres proyek, penyusunan laporan harian, mingguan, dan bulanan,
-              pengelolaan action plan, serta dukungan administrasi untuk Project Manager.
-            </p>
-          </div>
+  </div>
+
+</section>
+
+      <!-- PENGALAMAN -->
+      <section class="page" id="experience">
+
+        <div class="page-header">
+          <span class="page-kicker">Career Journey</span>
+          <h2>Pengalaman Kerja</h2>
+          <p>
+            Pengalaman kerja saya berfokus pada administrasi logistik, project control,
+            pengolahan data, reporting, dan koordinasi operasional.
+          </p>
         </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              <span>Juli 2026 – Sekarang</span>
+            </div>
+
+            <div class="timeline-card">
+              <h3>Staff Logistik</h3>
+              <h4>PT Raja Sukses Propertindo</h4>
+
+              <ul>
+                <li>Pengecekan ketersediaan material kepada supplier untuk kebutuhan proyek.</li>
+                <li>Membuat dan mengelola dokumen PO, DO, dan GR.</li>
+                <li>Mengelola administrasi penjualan material kepada vendor.</li>
+                <li>Menyusun pengajuan EAF dan LPJ.</li>
+                <li>Koordinasi dengan supplier, vendor, purchasing, dan tim internal.</li>
+                <li>Validasi data administrasi logistik agar dokumen tetap akurat.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              <span>Juli 2025 – Juli 2026</span>
+            </div>
+
+            <div class="timeline-card">
+              <h3>Admin Project</h3>
+              <h4>PT Raja Sukses Propertindo</h4>
+
+              <ul>
+                <li>Monitoring dan pengendalian progres ±15–20 proyek housing dan infrastruktur.</li>
+                <li>Mendukung administrasi operasional Project Manager.</li>
+                <li>Menyusun laporan progres, rekap kendala, MoM, dan monitoring action plan.</li>
+                <li>Input, validasi, dan sinkronisasi data sistem dengan kondisi lapangan.</li>
+                <li>Mengelola progress report, dokumentasi lapangan, dan evaluasi vendor.</li>
+                <li>Membantu otomatisasi pelaporan menggunakan Apps Script, Sheets, dan Drive.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-date">
+              <span>Juli 2024 – Juli 2025</span>
+            </div>
+
+            <div class="timeline-card">
+              <h3>Data Entry</h3>
+              <h4>CV Kahe Group</h4>
+
+              <ul>
+                <li>Input dan validasi data dengan tingkat akurasi tinggi.</li>
+                <li>Pengolahan data menggunakan Microsoft Excel.</li>
+                <li>Menggunakan VLOOKUP, HLOOKUP, dan Pivot Table.</li>
+                <li>Menyusun laporan berkala dan visualisasi data.</li>
+                <li>Mengelola database karyawan dan administrasi HR.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- PROJECT -->
+      <section class="page" id="project">
+
+        <div class="page-header">
+          <span class="page-kicker">Selected Work</span>
+          <h2>Project Personal</h2>
+          <p>
+            Beberapa project sistem yang saya buat untuk mendukung administrasi,
+            pengelolaan arsip, inventory, reporting, dan efisiensi operasional.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card featured">
+            <div class="project-icon">
+              <i class="bi bi-archive"></i>
+            </div>
+
+            <div class="project-body">
+              <span class="project-status">Selesai</span>
+              <h3>COREARSIP</h3>
+              <h4>Digital Archive Management System</h4>
+
+              <div class="case-study">
+                <p><strong>Problem:</strong> Pengelolaan arsip masih sulit ditelusuri jika hanya mengandalkan data manual.</p>
+                <p><strong>Solution:</strong> Membuat sistem arsip digital dengan metadata, pencarian, filter, retensi, role access, export Excel dan PDF.</p>
+                <p><strong>Impact:</strong> Memudahkan pencarian dokumen, monitoring arsip, dan kontrol data.</p>
+              </div>
+
+              <div class="tech-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+              </div>
+
+              <a href="https://medixie.github.io/COREARSIP/" target="_blank">
+                Lihat Website <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon green">
+              <i class="bi bi-file-earmark-check"></i>
+            </div>
+
+            <div class="project-body">
+              <span class="project-status">Selesai</span>
+              <h3>Generator Berita Acara</h3>
+              <h4>Berita Acara Otomatis</h4>
+
+              <div class="case-study">
+                <p><strong>Problem:</strong> Pembuatan dokumen BA membutuhkan format yang konsisten dan cepat.</p>
+                <p><strong>Solution:</strong> Membuat generator BA dengan input data, tabel dinamis, upload gambar, draft, export Word dan PDF.</p>
+                <p><strong>Impact:</strong> Proses pembuatan dokumen menjadi lebih rapi, cepat, dan standar.</p>
+              </div>
+
+              <div class="tech-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Apps Script</span>
+              </div>
+
+              <a href="https://medixie.github.io/Berita-Acara/" target="_blank">
+                Lihat Website <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon orange">
               <i class="bi bi-box-seam"></i>
             </div>
-            <h5 class="fw-bold mb-3">Logistics Administration</h5>
-            <p class="small mb-0">
-              Pengelolaan administrasi material, PO, DO, GR, EAF, LPJ,
-              pengecekan ketersediaan material, serta koordinasi supplier dan vendor.
-            </p>
-          </div>
-        </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
-              <i class="bi bi-folder-check"></i>
+            <div class="project-body">
+              <span class="project-status">Selesai</span>
+              <h3>INVENTRA</h3>
+              <h4>Inventory Management System</h4>
+
+              <div class="case-study">
+                <p><strong>Problem:</strong> Monitoring stok barang perlu dibuat lebih terstruktur dan mudah dievaluasi.</p>
+                <p><strong>Solution:</strong> Membuat sistem inventory dengan data barang, kategori, gudang, supplier, stok masuk, stok keluar, mutasi, dan laporan.</p>
+                <p><strong>Impact:</strong> Data stok lebih mudah dipantau, dicari, dan diekspor.</p>
+              </div>
+
+              <div class="tech-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+              </div>
+
+              <a href="https://medixie.github.io/Inventra/" target="_blank">
+                Lihat Website <i class="bi bi-arrow-right"></i>
+              </a>
             </div>
-            <h5 class="fw-bold mb-3">Document Control</h5>
-            <p class="small mb-0">
-              Pengelolaan dokumen proyek, filing, Minutes of Meeting, dokumentasi lapangan,
-              laporan kendala, evaluasi vendor, dan tracking tindak lanjut.
-            </p>
-          </div>
+          </article>
+
         </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
+      </section>
+
+      <!-- KEAHLIAN -->
+      <section class="page" id="skills">
+
+        <div class="page-header">
+          <span class="page-kicker">Competency</span>
+          <h2>Keahlian</h2>
+          <p>
+            Kombinasi kemampuan administrasi proyek, logistik, pengelolaan dokumen,
+            pengolahan data, dan pengembangan sistem sederhana.
+          </p>
+        </div>
+
+        <div class="skills-layout">
+
+          <div class="skill-grid">
+
+            <div class="skill-card">
+              <i class="bi bi-clipboard-check"></i>
+              <h3>Project Administration</h3>
+              <ul>
+                <li>MoM & Action Plan</li>
+                <li>Progress Report</li>
+                <li>Project Tracking</li>
+                <li>Documentation</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <i class="bi bi-box-seam"></i>
+              <h3>Logistics Administration</h3>
+              <ul>
+                <li>PO, DO, GR</li>
+                <li>EAF & LPJ</li>
+                <li>Supplier & Vendor</li>
+                <li>Material Control</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
               <i class="bi bi-bar-chart-line"></i>
+              <h3>Data & Reporting</h3>
+              <ul>
+                <li>Excel</li>
+                <li>Google Sheets</li>
+                <li>Pivot Table</li>
+                <li>Dashboard</li>
+              </ul>
             </div>
-            <h5 class="fw-bold mb-3">Data & Reporting</h5>
-            <p class="small mb-0">
-              Pengolahan dan validasi data menggunakan Microsoft Excel dan Google Sheets,
-              termasuk VLOOKUP, HLOOKUP, Pivot Table, dashboard, dan visualisasi data.
-            </p>
-          </div>
-        </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
+            <div class="skill-card">
               <i class="bi bi-code-slash"></i>
+              <h3>System Automation</h3>
+              <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Bootstrap</li>
+                <li>Google Apps Script</li>
+                <li>Export / Import Data</li>
+              </ul>
             </div>
-            <h5 class="fw-bold mb-3">System Automation</h5>
-            <p class="small mb-0">
-              Pengembangan sistem web dan otomatisasi menggunakan HTML, CSS, JavaScript,
-              Bootstrap, Google Apps Script, Google Sheets, dan Google Drive.
-            </p>
-          </div>
-        </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
+            <div class="skill-card">
+              <i class="bi bi-folder-check"></i>
+              <h3>Document Control</h3>
+              <ul>
+                <li>Filing System</li>
+                <li>Dokumen Proyek</li>
+                <li>Tracking & Monitoring</li>
+                <li>Data Management</li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
               <i class="bi bi-search"></i>
+              <h3>Problem Solving</h3>
+              <ul>
+                <li>Analisis 4M</li>
+                <li>Root Cause Analysis</li>
+                <li>Follow Up</li>
+                <li>Improvement</li>
+              </ul>
             </div>
-            <h5 class="fw-bold mb-3">Problem Analysis</h5>
-            <p class="small mb-0">
-              Analisis kendala proyek menggunakan pendekatan 4M, identifikasi akar masalah,
-              monitoring penyelesaian, serta penyusunan tindak lanjut.
-            </p>
+
           </div>
-        </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
-              <i class="bi bi-people"></i>
-            </div>
-            <h5 class="fw-bold mb-3">Coordination</h5>
-            <p class="small mb-0">
-              Koordinasi lintas fungsi dengan Project Manager, tim lapangan, purchasing,
-              vendor, supplier, dan departemen terkait.
-            </p>
-          </div>
-        </div>
+          <div class="tools-card">
+            <h3>Tools & System</h3>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
-          <div class="shadow-sm p-4 h-100">
-            <div class="icon-box mx-auto mb-3">
-              <i class="bi bi-person-check"></i>
-            </div>
-            <h5 class="fw-bold mb-3">Professional Skills</h5>
-            <p class="small mb-0">
-              Communication, time management, attention to detail, problem solving,
-              kerja sama tim, disiplin, tanggung jawab, dan cepat belajar.
-            </p>
-          </div>
-        </div>
+            <div class="tools-grid">
 
-      </div>
-    </div>
-  </section>
+              <div class="tool-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel">
+                <span>Excel</span>
+              </div>
 
-  <!-- Project -->
-  <section id="project" class="py-5 bg-with text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-4">Project Personal</h2>
+              <div class="tool-item">
+                <img src="asset/set.png" alt="Google Sheets">
+                <span>Sheets</span>
+              </div>
 
-      <p class="mb-5 text-muted">
-        Beberapa project sistem yang saya kerjakan untuk mendukung administrasi,
-        pengelolaan arsip, inventory, reporting, dan efisiensi operasional.
-      </p>
+              <div class="tool-item">
+                <img src="asset/Google_Apps_Script.svg.png" alt="Apps Script">
+                <span>Apps Script</span>
+              </div>
 
-      <div class="row g-4">
+              <div class="tool-item">
+                <img src="asset/HTML5_logo_and_wordmark.svg.png" alt="HTML">
+                <span>HTML</span>
+              </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="100">
-          <div class="card h-100 shadow-sm bg-primary text-white">
-            <div class="card-body text-start">
-              <h5 class="fw-bold">COREARSIP – Sistem Kearsipan Digital</h5>
-              <p class="small mb-3">
-                Sistem pengelolaan arsip digital dengan dashboard, input metadata dan file,
-                pencarian, filter, pagination, master unit dan kategori, retensi arsip,
-                peminjaman dan pengembalian, hak akses berbasis peran, backup, serta ekspor Excel dan PDF.
-              </p>
-              <span class="badge bg-warning text-dark mb-2">Selesai</span><br>
-              <a href="https://medixie.github.io/COREARSIP/" target="_blank" class="btn btn-outline-light btn-sm">
-                Lihat Website
-              </a>
+              <div class="tool-item">
+                <img src="asset/CSS3_logo_and_wordmark.svg.png" alt="CSS">
+                <span>CSS</span>
+              </div>
+
+              <div class="tool-item">
+                <i class="bi bi-filetype-js"></i>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="tool-item">
+                <i class="bi bi-bootstrap"></i>
+                <span>Bootstrap</span>
+              </div>
+
+              <div class="tool-item">
+                <i class="bi bi-hdd-network"></i>
+                <span>ERP</span>
+              </div>
+
+              <div class="tool-item">
+                <i class="bi bi-google"></i>
+                <span>Google Drive</span>
+              </div>
+
             </div>
           </div>
+
         </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-right" data-aos-delay="150">
-          <div class="card h-100 shadow-sm">
-            <div class="card-body text-start">
-              <h5 class="fw-bold text-primary">Generator Berita Acara</h5>
-              <p class="small mb-3">
-                Aplikasi pembuat berita acara untuk pengajuan material, keterangan pekerjaan,
-                dan addendum atau kendala. Sistem dilengkapi pihak penandatangan, tabel material dinamis,
-                upload gambar, penomoran dokumen, penyimpanan draft, serta ekspor Word dan PDF.
-              </p>
-              <span class="badge bg-warning text-dark mb-2">Selesai</span><br>
-              <a href="https://medixie.github.io/Berita-Acara/" target="_blank" class="btn btn-outline-primary btn-sm">
-                Lihat Website
-              </a>
+      </section>
+
+      <!-- PENDIDIKAN -->
+      <section class="page" id="education">
+
+        <div class="page-header">
+          <span class="page-kicker">Education</span>
+          <h2>Riwayat Pendidikan</h2>
+          <p>
+            Riwayat pendidikan yang mendukung pengembangan kompetensi administrasi,
+            kearsipan, pengelolaan data, dan sistem informasi.
+          </p>
+        </div>
+
+        <div class="education-grid">
+
+          <div class="education-card">
+            <div class="education-logo">
+              <img src="asset/logo-ut-small-transparent-300x226.png.webp" alt="Universitas Terbuka">
             </div>
-          </div>
-        </div>
 
-        <div class="col-md-6 col-lg-3" data-aos="fade-left" data-aos-delay="200">
-          <div class="card h-100 shadow-sm bg-primary text-white">
-            <div class="card-body text-start">
-              <h5 class="fw-bold">INVENTRA – Inventory Management System</h5>
-              <p class="small mb-3">
-                Sistem manajemen inventory berbasis web untuk mengelola data barang, kategori, gudang,
-                supplier, stok masuk, stok keluar, mutasi gudang, laporan, dashboard monitoring,
-                notifikasi stok rendah, backup/restore data, dan sinkronisasi data dengan spreadsheet.
-              </p>
-              <span class="badge bg-warning text-dark mb-2">Selesai</span><br>
-              <a href="https://medixie.github.io/Inventra/" target="_blank" class="btn btn-outline-light btn-sm">
-                Lihat Website
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Pendidikan -->
-  <section id="education" class="py-5 bg-white">
-    <div class="container">
-
-      <div class="text-center mb-5" data-aos="fade-up">
-        <h2 class="fw-bold">Riwayat Pendidikan</h2>
-        <p class="text-muted">
-          Riwayat pendidikan yang mendukung pengembangan kompetensi administrasi,
-          kearsipan, pengelolaan data, dan sistem informasi.
-        </p>
-      </div>
-
-      <div class="row justify-content-center align-items-stretch gy-4">
-
-        <div class="col-md-6">
-          <div class="d-flex align-items-start bg-white shadow rounded-4 p-4 h-100 border-start border-4 border-primary"
-            data-aos="fade-right" data-aos-delay="100">
-            <img src="asset/logo-ut-small-transparent-300x226.png.webp" alt="Logo UT" width="50"
-              class="me-4 flex-shrink-0" />
             <div>
-              <h5 class="fw-bold mb-1">Universitas Terbuka</h5>
-              <p class="text-muted mb-1 small">D4 Kearsipan</p>
-              <span class="badge bg-primary mb-2">Mahasiswa Aktif</span>
-              <p class="small mb-0">
-                <i class="bi bi-calendar-event me-1"></i> Tahun Masuk: 2025
-              </p>
+              <span class="education-status active-status">Mahasiswa Aktif</span>
+              <h3>Universitas Terbuka</h3>
+              <p>D4 Kearsipan</p>
+              <small>
+                <i class="bi bi-calendar-event"></i>
+                Tahun Masuk: 2025
+              </small>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-6">
-          <div class="d-flex align-items-start bg-white shadow rounded-4 p-4 h-100 border-start border-4 border-warning"
-            data-aos="fade-left" data-aos-delay="100">
-            <img src="asset/images-removebg-preview.png" alt="Logo SMA" width="50" class="me-4 flex-shrink-0" />
+          <div class="education-card">
+            <div class="education-logo">
+              <img src="asset/images-removebg-preview.png" alt="SMA Negeri 1 Jamblang">
+            </div>
+
             <div>
-              <h5 class="fw-bold mb-1">SMA Negeri 1 Jamblang</h5>
-              <p class="text-muted mb-1 small">Ilmu Pengetahuan Sosial</p>
-              <span class="badge bg-warning text-dark mb-2">Lulus</span>
-              <p class="small mb-1">
-                <i class="bi bi-calendar-event me-1"></i> Tahun: 2021 – 2024
-              </p>
+              <span class="education-status done-status">Lulus</span>
+              <h3>SMA Negeri 1 Jamblang</h3>
+              <p>Ilmu Pengetahuan Sosial</p>
+              <small>
+                <i class="bi bi-calendar-event"></i>
+                Tahun: 2021 – 2024
+              </small>
             </div>
           </div>
+
         </div>
 
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- Kirim Pesan -->
-  <section id="contact-form" class="py-5 bg-with">
-    <div class="container">
+      <!-- KONTAK -->
+      <section class="page" id="contact">
 
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Kirim Pesan</h2>
-        <p class="text-muted">
-          Silakan hubungi saya untuk kerja sama, project, atau pertanyaan lainnya.
-        </p>
-      </div>
+        <div class="page-header">
+          <span class="page-kicker">Contact</span>
+          <h2>Kontak</h2>
+          <p>
+            Silakan hubungi saya untuk kerja sama, project, kebutuhan administrasi,
+            atau diskusi sistem sederhana.
+          </p>
+        </div>
 
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="contact-layout">
 
-          <form action="https://formspree.io/f/your-id" method="POST" class="contact-box p-4 shadow-sm">
+          <div class="contact-info-card">
 
-            <div class="mb-3">
-              <input type="text" name="name" class="form-control" placeholder="Nama" required>
+            <h3>Informasi Kontak</h3>
+            <p>
+              Saya terbuka untuk komunikasi profesional terkait administrasi logistik,
+              project administration, reporting, dan pengembangan sistem sederhana.
+            </p>
+
+            <div class="contact-list">
+
+              <a href="mailto:maedi100kc@gmail.com" class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <div>
+                  <span>Email</span>
+                  <strong>maedi100kc@gmail.com</strong>
+                </div>
+              </a>
+
+              <a href="https://wa.me/6282119883246" target="_blank" class="contact-item">
+                <i class="bi bi-whatsapp"></i>
+                <div>
+                  <span>WhatsApp</span>
+                  <strong>0821-1988-3246</strong>
+                </div>
+              </a>
+
+              <div class="contact-item">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                  <span>Lokasi</span>
+                  <strong>Cirebon, Indonesia</strong>
+                </div>
+              </div>
+
+              <a href="#" class="contact-item">
+                <i class="bi bi-linkedin"></i>
+                <div>
+                  <span>LinkedIn</span>
+                  <strong>https://www.linkedin.com/in/maedi-med-9734b0333</strong>
+                </div>
+              </a>
+
             </div>
 
-            <div class="mb-3">
-              <input type="email" name="email" class="form-control" placeholder="Email" required>
+          </div>
+
+          <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nama</label>
+                <input type="text" name="name" placeholder="Masukkan nama" required>
+              </div>
+
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Masukkan email" required>
+              </div>
             </div>
 
-            <div class="mb-3">
-              <textarea name="message" rows="5" class="form-control" placeholder="Pesan" required></textarea>
+            <div class="form-group">
+              <label>Subjek</label>
+              <input type="text" name="subject" placeholder="Masukkan subjek">
             </div>
 
-            <button type="submit" class="btn btn-primary w-100 fw-semibold">
-              Send Message
+            <div class="form-group">
+              <label>Pesan</label>
+              <textarea name="message" rows="6" placeholder="Tulis pesan Anda" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-custom full-width">
+              <i class="bi bi-send"></i>
+              Kirim Pesan
             </button>
+
+            <p class="form-note">
+              Catatan: ubah bagian <strong>formspree.io/f/your-id</strong> dengan ID Formspree asli.
+            </p>
 
           </form>
 
         </div>
-      </div>
 
-    </div>
-  </section>
+      </section>
 
-  <!-- Footer -->
-  <footer id="kontak" class="footer-section text-white pt-5 pb-4">
-    <div class="container">
-      <div class="row text-center text-md-start">
+      <!-- FOOTER -->
+      <footer class="main-footer">
+        <p>© 2025 Maedi. All rights reserved.</p>
+        <p>Designed with focus, accuracy, and dedication.</p>
+      </footer>
 
-        <div class="col-md-4 mb-4">
-          <h5 class="fw-bold">Maedi</h5>
-          <p class="small">
-            Profesional di bidang <strong>Logistics Administration, Project Administration & Data System</strong>
-            yang berfokus pada pengelolaan dokumen, monitoring progres, reporting,
-            administrasi pengadaan material, serta pengembangan sistem sederhana untuk
-            meningkatkan efisiensi operasional dan akurasi data.
-          </p>
-        </div>
+    </main>
 
-        <div class="col-md-2 mb-4">
-          <h6 class="fw-semibold">Menu</h6>
-          <ul class="list-unstyled footer-nav">
-            <li><a href="#home" class="text-white text-decoration-none small">Beranda</a></li>
-            <li><a href="#about" class="text-white text-decoration-none small">Tentang saya</a></li>
-            <li><a href="#project" class="text-white text-decoration-none small">Project</a></li>
-            <li><a href="#skills" class="text-white text-decoration-none small">Keahlian</a></li>
-            <li><a href="#kontak" class="text-white text-decoration-none small">Kontak</a></li>
-          </ul>
-        </div>
+  </div>
 
-        <div class="col-md-3 mb-4">
-          <h6 class="fw-semibold">Layanan Profesional</h6>
-          <ul class="list-unstyled small">
-            <li>Logistics Administration: PO, DO, GR, EAF, LPJ</li>
-            <li>Project Control & Progress Monitoring</li>
-            <li>Document Control & Data Validation</li>
-            <li>Dashboard Reporting & Data Visualization</li>
-            <li>Automation Reporting with Google Apps Script</li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-4">
-          <h6 class="fw-semibold">Kontak</h6>
-          <p class="small mb-1">📞 0821-1988-3246</p>
-          <p class="small mb-1">✉️ maedi100kc@gmail.com</p>
-          <p class="small">📍 Cirebon, Indonesia</p>
-        </div>
-
-      </div>
-
-      <hr class="border-top border-white" />
-
-      <div class="text-center">
-        <p class="mb-0 small">&copy; 2025 <strong>Maedi</strong>. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scroll Top Button -->
-  <button id="scrollTopBtn" onclick="scrollToTop()">
-    <i class="bi bi-arrow-up"></i>
-  </button>
-
-  <!-- Script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <script>
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      delay: 100
-    });
-  </script>
-
-  <script>
-    window.onscroll = function () {
-      const btn = document.getElementById("scrollTopBtn");
-
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        btn.style.display = "flex";
-      } else {
-        btn.style.display = "none";
-      }
-    };
-
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-  </script>
-
+  <!-- Main JS -->
+  <script src="script.js"></script>
 </body>
 
 </html>
